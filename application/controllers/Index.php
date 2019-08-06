@@ -8,6 +8,7 @@ class Index extends CI_Controller {
 		parent::__construct();
 	}
 //tambahan asep
+	//okesip
 	public function index()
 	{
 		$data['title']="Beranda";
