@@ -1,0 +1,14 @@
+.container2{
+	width: 30%;
+	/*margin-top: 15%;*/
+	box-shadow: 0 3px 25px rgb(0, 0, 0); 
+	padding: 30px;
+	float: center;
+}
+.btn{
+	width: 49%;
+}
+
+.margin2{
+	margin: 5px;
+}
