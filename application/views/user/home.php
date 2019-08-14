@@ -198,16 +198,16 @@
         			<tbody>
         				<tr>
         					<td>1</td>
-        					<td>Jurusan 1</td>
+        					<td>IPA</td>
         				</tr>
         				<tr>
         					<td>2</td>
-        					<td>Jurusan 2</td>
+        					<td>IPS</td>
         				</tr>
-        				<tr>
+        				<!--<tr>
         					<td>3</td>
         					<td>Jurusan 3</td>
-        				</tr>
+        				</tr> -->
         			</tbody>
         		</table>
         	</div>
@@ -215,10 +215,10 @@
         		<h4 class="header1">Kegiatan</h4>
         		<div class="sidebar col-md-12 col-sm-12">
 		            <ul class="list-group margin-bottom-25 sidebar-menu">
-		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> Kegiatan</li>
-		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> Kegiatan</li>
-		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> Kegiatan</li>
-		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> Kegiatan</li>
+		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> ASSEMBLY</li>
+		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> FIELDTRIP</li>
+		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> PASKIBRA</li>
+		              <li class="list-group-item clearfix"><i class="fa fa-angle-right"></i> JOB REVIEW</li>
 		            </ul>
 		          </div>
         	</div>

@@ -18,7 +18,11 @@ License: You must have a valid license purchased only from themeforest(the above
 <html lang="en">
     <!--<![endif]-->
     <!-- BEGIN HEAD -->
-
+<style type="text/css">
+    .page-header .page-header-top .page-logo .logo-default {
+    margin: 15px !important;
+}
+</style>
     <head>
         <meta charset="utf-8" />
         <title>E-Learning | SMA Taruna Mandiri</title>
