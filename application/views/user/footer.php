@@ -107,8 +107,22 @@
 <script src="<?php echo base_url('assets/user') ?>/layouts/layout3/scripts/demo.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url('assets/user') ?>/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url('assets/user') ?>/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+        <script src="<?php echo base_url('assets/user');?>/lib/noty.min.js"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
+<?php if($this->session->flashdata('notif')){?>
+<script type="text/javascript">
+    new Noty({
+        
+        text: '<?php echo $this->session->flashdata('pesan'); ?>',
+        timeout: 3000,
+        theme: "metroui",
+        type: "<?php echo $this->session->flashdata('type'); ?>",
+
+        
+    }).show();
+</script>
+<?php } ?>
 
 </html>
 

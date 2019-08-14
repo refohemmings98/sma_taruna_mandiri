@@ -65,8 +65,15 @@ class Index extends CI_Controller {
 
 		if(empty($password)){
 			redirect(base_url('Index/profil_siswa'));
-			
 		}else{
+			$data = array(
+                'notif'=>true, 
+                'pesan'=>"Password berhasil diubah.", 
+                'type'=>'success'
+            );
+            
+            $this->session->set_flashdata($data);
+
 			$this->db->set('password',$password);
 			$this->db->where('id_siswa',$id_siswa);
 			$this->db->update('siswa');
@@ -86,6 +93,21 @@ class Index extends CI_Controller {
 			$this->session->set_userdata('id_siswa',$cek_siswa->id_siswa);//('nama session','nilai session')
 			$this->session->set_userdata('nama',$cek_siswa->nama);//('nama session','nilai session')
 			// $this->session->set_flasdata('id_siswa',$cek_siswa->id_siswa);?\
+			$data = array(
+                'notif'=>true, 
+                'pesan'=>"Login berhasil.", 
+                'type'=>'success'
+            );
+            
+            $this->session->set_flashdata($data);
+		}else{
+			$data = array(
+                'notif'=>true, 
+                'pesan'=>"Periksa kembali Username dan Password anda.", 
+                'type'=>'warning'
+            );
+            
+            $this->session->set_flashdata($data);
 		}
 		// var_dump($this->session->userdata('id_siswa'));exit();
 		redirect(base_url('Index/index'));
