@@ -57,6 +57,23 @@ class Index extends CI_Controller {
 		$data['title']="masuk";
 		$this->load->view('user/v_masuk',$data);
 	}
+
+	public function ubahPassword(){
+		// print_r($_POST);
+		$password = $this->input->post('password');
+		$id_siswa = $this->input->post('id_siswa');
+
+		if(empty($password)){
+			redirect(base_url('Index/profil_siswa'));
+			
+		}else{
+			$this->db->set('password',$password);
+			$this->db->where('id_siswa',$id_siswa);
+			$this->db->update('siswa');
+			redirect(base_url('Index/profil_siswa'));
+		}
+	}
+
 	public function proses_login(){
 		$nis= $this->input->post('nis');
 		$password= $this->input->post('password');
@@ -81,6 +98,9 @@ class Index extends CI_Controller {
 
 	public function profil_siswa(){
 		$data['title']='Profil';
+		$id_siswa = $this->session->userdata('id_siswa');
+		$this->db->where('id_siswa',$id_siswa);
+		$data['get_siswa'] = $this->db->get('siswa')->row();
 		$this->load->view('user/v_profil_siswa',$data);
 	}
 	
